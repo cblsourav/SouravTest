@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //========================== sort array ==============================//
+
+        var inputArray = [1, 2, 3, [4, 5, 6, [7, 8, [9, 10]]]];
+
+        function array(arr) {
+            var fltarr = [];
+
+            function resArray(arr) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (Array.isArray(arr[i])) {
+                        resArray(arr[i]);
+                    } else {
+                        fltarr.push(arr[i]);
+                    }
+                }
+            }
+
+            resArray(arr);
+            return fltarr;
+        }
+
+        var outputArray = array(inputArray);
+        console.log(outputArray);
+    </script>
+</body>
+
+</html>
