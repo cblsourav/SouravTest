@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var arr = [10, 2, 3, 7, 5, 6, 70, 40];
+
+        var minValue = arr[0];
+        var maxValue = arr[0];
+
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < minValue) {
+                minValue = arr[i];
+            }
+            if (arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+        }
+
+        console.log( 'min',  minValue);
+        console.log('max', maxValue);
+
+    </script>
+</body>
+</html>
