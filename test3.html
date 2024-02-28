@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let input = ['J', 'Z', 'D', 'Q', 'L', 'W', 'A', 'H', 'Y', 'K', 'G', 'N', 'V', 'R', 'P', 'X', 'C', 'M', 'F', 'O', 'U', 'S', 'I', 'E', 'T', 'B']
+
+        var len = input.length;
+        for (var i = 0; i < len - 1; i++) {
+            var minIndex = i;
+            for (var j = i + 1; j < len; j++) {
+                if (input[j] < input[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex !== i) {
+                var temp = input[i];
+                input[i] = input[minIndex];
+                input[minIndex] = temp;
+            }
+        }
+
+        console.log(input);
+        document.write(input)
+    </script>
+</body>
+</html>
